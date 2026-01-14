@@ -1,0 +1,16 @@
+# https://taskfile.dev/docs/guide
+# https://taskfile.dev/reference/templating/
+version: '3'
+tasks:
+  default: |
+    # Build TypeScript
+    npm run build
+
+    # Run the client
+    # node build/index.js path/to/server.py # python server
+    node build/index.js ../weather-server-typescript/build/index.js # node server
+
+  setup:
+    # Install dependencies
+    # npm install @anthropic-ai/sdk @modelcontextprotocol/sdk dotenv
+    npm install
