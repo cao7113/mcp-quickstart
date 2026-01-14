@@ -1,0 +1,31 @@
+# https://taskfile.dev/docs/guide
+# https://taskfile.dev/reference/templating/
+version: '3'
+tasks:
+  default: |
+    npm run build
+    node ./build/index.js
+
+  check: |
+    node --version
+    npm --version
+
+    # v24.12.0
+    # npm warn Unknown user config "home". This will stop working in the next major version of npm.
+    # 11.6.2
+
+  setup: |
+    # Install dependencies
+    # npm install @modelcontextprotocol/sdk zod@3
+    # npm install -D @types/node typescript
+    npm install
+  
+  # npm warn Unknown user config "home". This will stop working in the next major version of npm.
+  fix.npm.home: |
+    npm config delete home
+    npm config get home 
+    # from ~/.npmrc
+
+  link.test: |
+    npm link
+    # npm unlink -g mcp-quickstart-ts
