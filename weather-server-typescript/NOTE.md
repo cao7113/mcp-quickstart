@@ -7,7 +7,16 @@ Test questions(US based):
 - What’s the weather in Sacramento?
 - What are the active weather alerts in Texas?
 
-Claud mcp config for node: `vi ~/Library/Application\ Support/Claude/claude_desktop_config.json`
+旧金山
+{
+  `latitude`: 37.7749,
+  `longitude`: -122.4194
+}
+
+
+## Claude config
+
+npm : `vi ~/Library/Application\ Support/Claude/claude_desktop_config.json`
 
 ```
 {
@@ -43,7 +52,6 @@ for bun reference
   }
 }
 ```
-
 
 ## Links
 

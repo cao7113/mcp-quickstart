@@ -6,6 +6,10 @@ tasks:
     npm run build
     node ./build/index.js
 
+  inspect: |
+    # - https://modelcontextprotocol.io/docs/tools/inspector
+    npx @modelcontextprotocol/inspector node ./build/index.js
+
   check: |
     node --version
     npm --version

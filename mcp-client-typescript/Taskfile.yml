@@ -14,3 +14,14 @@ tasks:
     # Install dependencies
     # npm install @anthropic-ai/sdk @modelcontextprotocol/sdk dotenv
     npm install
+
+  test: |
+    bun test-claude.ts
+
+  t2: |
+    echo $ANTHROPIC_API_KEY
+    curl -X POST "https://api.anthropic.com/v1/files" \
+     -H "x-api-key: $ANTHROPIC_API_KEY" \
+     -H "anthropic-version: 2023-06-01" \
+     -H "anthropic-beta: files-api-2025-04-14" \
+     -F "file=@README.md"

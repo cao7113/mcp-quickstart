@@ -12,7 +12,7 @@ Test questions(US based):
 You’ll need an Anthropic API key from the Anthropic Console.
 - https://platform.claude.com/settings/keys
 
-## To fix
+## To fix forbidden
 
 ```
 Error: PermissionDeniedError: 403 {"error":{"type":"forbidden","message":"Request not allowed"}}
